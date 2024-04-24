@@ -16,7 +16,7 @@ def split_pdf(input_pdf_path, output_folder):
             print(f"Page {page_number + 1} saved as {output_pdf_path}")
 
 if __name__ == "__main__":
-    input_pdf_path = "C:/Users/itama/OneDrive/Documents/itamar/temp/case.pdf"
-    output_folder = "C:/Users/itama/OneDrive/Documents/itamar/temp"
+    input_pdf_path = "C:/temp/case.pdf"
+    output_folder = "C:/temp"
     
     split_pdf(input_pdf_path, output_folder)
