@@ -25,6 +25,13 @@ class pdf_swissknife:
                     pdf_writer.write(output_pdf)
                 
                 print(f"Page {page_number + 1} saved as {output_pdf_path}")
+
+    
+    @staticmethod
+    def convert(input_pdf_path, output_file):
+        with open(output_file, "wb") as f:
+            f.write(img2pdf_convert(input_pdf_path)) 
+            
    
 if __name__ == "__main__":
     input_pdf_path = "C:/temp/case.pdf"
