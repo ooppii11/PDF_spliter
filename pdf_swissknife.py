@@ -1,5 +1,6 @@
 from PyPDF2 import PdfMerger, PdfReader, PdfWriter
 from img2pdf import convert as img2pdf_convert
+
 class pdf_swissknife:
 
     @staticmethod
@@ -25,13 +26,13 @@ class pdf_swissknife:
                     pdf_writer.write(output_pdf)
                 
                 print(f"Page {page_number + 1} saved as {output_pdf_path}")
-
     
     @staticmethod
-    def convert(input_pdf_path, output_file):
-        with open(output_file, "wb") as f:
-            f.write(img2pdf_convert(input_pdf_path)) 
-            
+    def convert_image_to_pdf(input_image_path, output_pdf_path):
+        with open(input_image_path, 'rb') as image_file:
+            with open(output_pdf_path, 'wb') as pdf_file:
+                pdf_file.write(img2pdf_convert(image_file))
+
    
 if __name__ == "__main__":
     input_pdf_path = "C:/temp/case.pdf"
